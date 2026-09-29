@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Local configuration and secrets
+config.json
+.env
+.env.*
+!.env.example
+
+# Generated data and experiment outputs
+output/
+data/
+
+# Historical backups and archives
+old/
+*.zip
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/

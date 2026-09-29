@@ -1,0 +1,113 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "v",
+      "m",
+      "ml",
+      "e",
+      "wr",
+      "mi",
+      "di",
+      "rn",
+      "findings"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "v": {
+        "enum": [
+          "T"
+        ]
+      },
+      "m": {
+        "enum": [
+          "T",
+          "F"
+        ]
+      },
+      "ml": {
+        "enum": [
+          "T",
+          "F"
+        ]
+      },
+      "e": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "old",
+            "new"
+          ],
+          "properties": {
+            "old": {
+              "type": "string",
+              "minLength": 1
+            },
+            "new": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "wr": {
+        "enum": [
+          "T",
+          "F"
+        ]
+      },
+      "mi": {
+        "enum": [
+          "T",
+          "F"
+        ]
+      },
+      "di": {
+        "enum": [
+          "T",
+          "F"
+        ]
+      },
+      "rn": {
+        "type": "string",
+        "minLength": 1
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "kind",
+            "excerpt",
+            "reason"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "wr",
+                "mi",
+                "di"
+              ]
+            },
+            "excerpt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

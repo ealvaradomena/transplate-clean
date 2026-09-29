@@ -1,0 +1,3 @@
+document_id,page,unit_id,source_english,translation_spanish,model,pdf_url
+fictional,1,example-1,The sample has two observations.,La muestra tiene dos observaciones.,candidate-A,
+fictional,1,example-1,The sample has two observations.,La muestra cuenta con dos observaciones.,candidate-B,
